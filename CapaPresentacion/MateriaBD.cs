@@ -20,5 +20,21 @@ namespace CapaPresentacion
             }
             return r;
         }
+        public bool insertar(int ID,string Asi, int Mod)
+        {
+            bool r = false;
+            seccionTableAdapter seccion = new seccionTableAdapter();
+            try
+            {
+                seccion.inserccion_seccion(ID, Asi, Mod);
+                r = true;
+            }
+            catch (Exception e)
+            {
+                r = false;
+            }
+           
+            return r;
+        }
     }
 }

@@ -18,15 +18,21 @@ namespace CapaPresentacion
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            ReportViewer1.Visible = true;
+           
             ReportViewer1.LocalReport.Refresh();
             
-            
-        
+
         }
 
         protected void ObjectDataSource1_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
         {
             
+        }
+
+        protected void ObjectDataSource1_Selecting1(object sender, ObjectDataSourceSelectingEventArgs e)
+        {
+            ReportViewer1.LocalReport.Refresh();
         }
     }
 }
